@@ -5,8 +5,8 @@ const cafeRows = document.querySelector('#cafe-row')
 // create element & render cafe
 function renderCafe(doc){
     let li = document.createElement('li');
-    let name = document.createElement('span');
-    let city = document.createElement('span');
+    let name = document.createElement('p');
+    let city = document.createElement('p');
     let cross = document.createElement('div');
 
     let rows = document.createElement('div');
@@ -25,6 +25,7 @@ function renderCafe(doc){
 
     rows.appendChild(name);
     rows.appendChild(city);
+    rows.appendChild(cross;
 
     cafeList.appendChild(li);
 
