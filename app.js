@@ -13,7 +13,7 @@ function renderCafe(doc){
 
     li.setAttribute('data-id', doc.id);
     name.textContent = doc.data().name;
-    city.textContent = doc.data().city;
+    city.textContent = doc.data().city + "hehe";
     cross.textContent = 'x';
 
     rows.setAttribute('data-id', doc.id)
@@ -25,7 +25,7 @@ function renderCafe(doc){
 
     rows.appendChild(name);
     rows.appendChild(city);
-    rows.appendChild(cross;
+    rows.appendChild(cross);
 
     cafeList.appendChild(li);
 
