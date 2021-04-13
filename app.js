@@ -1,5 +1,6 @@
 const cafeList = document.querySelector('#cafe-list');
 const form = document.querySelector('#add-cafe-form');
+const cafeRows = document.querySelector('#cafe-row')
 
 // create element & render cafe
 function renderCafe(doc){
@@ -8,16 +9,26 @@ function renderCafe(doc){
     let city = document.createElement('span');
     let cross = document.createElement('div');
 
+    let rows = document.createElement('div');
+
     li.setAttribute('data-id', doc.id);
     name.textContent = doc.data().name;
     city.textContent = doc.data().city;
     cross.textContent = 'x';
 
+    rows.setAttribute('data-id', doc.id)
+    rows.setAttribute('class', 'col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12')
+
     li.appendChild(name);
     li.appendChild(city);
     li.appendChild(cross);
 
+    rows.appendChild(name);
+    rows.appendChild(city);
+
     cafeList.appendChild(li);
+
+    cafeRows.appendChild(rows);
 
     // deleting data
     cross.addEventListener('click', (e) => {
