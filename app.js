@@ -5,7 +5,7 @@ const cafeRows = document.querySelector('#cafe-row')
 function renderCafe(doc){
     let name = document.createElement('p');
     let city = document.createElement('p');
-    let cross = document.createElement('div');
+    let cross = document.createElement('button');
 
     let rows = document.createElement('div');
 
