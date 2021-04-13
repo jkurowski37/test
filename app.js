@@ -1,33 +1,25 @@
-const cafeList = document.querySelector('#cafe-list');
 const form = document.querySelector('#add-cafe-form');
 const cafeRows = document.querySelector('#cafe-row')
 
 // create element & render cafe
 function renderCafe(doc){
-    let li = document.createElement('li');
     let name = document.createElement('p');
     let city = document.createElement('p');
-    let cross = document.createElement('div');
+    let cross = document.createElement('button');
 
     let rows = document.createElement('div');
 
-    li.setAttribute('data-id', doc.id);
     name.textContent = doc.data().name;
     city.textContent = doc.data().city + "hehe";
-    cross.textContent = 'x';
+    cross.textContent = 'Delete';
 
     rows.setAttribute('data-id', doc.id)
     rows.setAttribute('class', 'col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12')
-
-    li.appendChild(name);
-    li.appendChild(city);
-    li.appendChild(cross);
 
     rows.appendChild(name);
     rows.appendChild(city);
     rows.appendChild(cross);
 
-    cafeList.appendChild(li);
 
     cafeRows.appendChild(rows);
 
